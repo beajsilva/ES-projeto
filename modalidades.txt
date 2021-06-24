@@ -1,0 +1,4 @@
+a65375e8-8cff-4e33-a9f7-8f68e3b92edc,mod1,23,feminino;
+83df761b-8f26-47c7-a470-78b8dfaee50e,mod2,100,masculino;
+0dccaa4b-0f9f-4db3-b1bf-be6854caee8d,mod3,5,feminino;
+2a8b82c5-f0bf-4ca0-9d03-d973d2e3b67f,mod4,200,masculino;
