@@ -3,6 +3,7 @@ package vista;
 import modelo.DadosAplicacao;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,17 +13,18 @@ public class PaisesMaisMedalhados extends JFrame{
   private JButton btnMedalhados;
   private JButton btnAtletas;
   private JButton btnEventosModalidades;
-  private JTable table1;
-  private JComboBox comboBox1;
+  private JTable tabelaMedalhados;
+  private JComboBox filtros;
   private JPanel painelMedalhados;
   private DadosAplicacao dados;
 
   public PaisesMaisMedalhados() {
-    super("Recordes Mundiais");
+    super("Países mais medalhados");
     dados = DadosAplicacao.getDadosAplicacao();
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setContentPane(painelMedalhados);
     pack();
+    criarTabelaMedalhados();
     setVisible(true);
 
     btnEventosModalidades.addActionListener(new ActionListener() {
@@ -47,5 +49,20 @@ public class PaisesMaisMedalhados extends JFrame{
         new Recordes();
       }
     });
+  }
+
+  private void criarTabelaMedalhados(){
+    final DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Posição");
+    model.addColumn("País");
+    model.addColumn("Ouro");
+    model.addColumn("Prata");
+    model.addColumn("Bronze");
+    model.addColumn("Medalhas");
+
+    String row[] = {"", "", "", "", "", ""};
+    model.addRow(row);
+
+    tabelaMedalhados.setModel(model);
   }
 }

@@ -3,6 +3,7 @@ package vista;
 import modelo.*;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class InformacaoAtleta extends JFrame{
     dados = DadosAplicacao.getDadosAplicacao();
     atleta = dados.getAtleta(idAtleta);
     tituloAtleta.setText(atleta.getNome().toUpperCase() + " - " + atleta.getSexo().toUpperCase().charAt(0));
+    criarTabelaRecordes();
     setVisible(true);
 
     btnEventosModalidades.addActionListener(new ActionListener() {
@@ -92,5 +94,16 @@ public class InformacaoAtleta extends JFrame{
     }
 
     tabelaInscricoes = new JTable(data, colunas);
+  }
+
+  private void criarTabelaRecordes(){
+    final DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Prova");
+    model.addColumn("Marca");
+
+    String row[] = {"", ""};
+    model.addRow(row);
+
+    tabelaRecordes.setModel(model);
   }
 }

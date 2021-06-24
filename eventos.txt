@@ -1,9 +1,0 @@
-e8a82a81-7e58-47f6-8b93-dd1fba257795,Evento 1,Local,PT,21-06-2021,21-07-2021;
-
-
-
-
-e9e4e4b1-5c98-431a-8dcf-19ffc9958b08,123,123,123,13,123;
-3664d515-1b15-46de-8924-467b30aba002,test g,casa,py,ff,fvf;
-25cca99e-5e92-4315-83d9-4f6c0026cfbc,dwd,dwd,dwd,dw,dw;
-c2243d7f-30c6-44fb-8a94-8cf3f44cd50a,eeee,r,r,r,r;

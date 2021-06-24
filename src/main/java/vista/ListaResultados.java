@@ -3,6 +3,7 @@ package vista;
 import modelo.DadosAplicacao;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,7 +13,7 @@ public class ListaResultados extends JFrame{
   private JButton btnMedalhados;
   private JButton btnAtletas;
   private JButton btnEventosModalidades;
-  private JTable table1;
+  private JTable tabelaResultados;
   private JPanel painelListaResultados;
   private DadosAplicacao dados;
 
@@ -22,6 +23,7 @@ public class ListaResultados extends JFrame{
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setContentPane(painelListaResultados);
     pack();
+    criarTabelaResultados();
     setVisible(true);
 
     btnEventosModalidades.addActionListener(new ActionListener() {
@@ -52,5 +54,19 @@ public class ListaResultados extends JFrame{
         new PaisesMaisMedalhados();
       }
     });
+  }
+  private void criarTabelaResultados(){
+    final DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Posição");
+    model.addColumn("Nome");
+    model.addColumn("Nacionalidade");
+    model.addColumn("Sexo");
+    model.addColumn("Data nascimento");
+    model.addColumn("Resultado");
+
+    String row[] = {"", "", "", "", "", ""};
+    model.addRow(row);
+
+    tabelaResultados.setModel(model);
   }
 }

@@ -80,7 +80,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="93f80" class="javax.swing.JTable" binding="table1" default-binding="true">
+              <component id="93f80" class="javax.swing.JTable" binding="tabelaEtapas">
                 <constraints/>
                 <properties/>
               </component>
